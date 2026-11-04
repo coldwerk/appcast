@@ -1,0 +1,117 @@
+{
+ "schema": 1,
+ "issued": "2026-11-03",
+ "review_by": "2026-12-01",
+ "show_until": "2026-12-18",
+ "note": "US$ per million tokens, standard tier. A price is shown only until show_until; after it the app points the user to the provider's own pricing page (R440).",
+ "providers": {
+  "anthropic": {
+   "pricing_page": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "models": {
+    "claude-opus-5-5": {
+     "in": 4.0,
+     "out": 20.0
+    },
+    "claude-sonnet-5-5": {
+     "in": 2.0,
+     "out": 10.0
+    },
+    "claude-haiku-5-5": {
+     "in": 0.1,
+     "out": 0.5,
+     "above_input_tokens": 100000,
+     "in_above": 0.5,
+     "out_above": 2.5
+    },
+    "claude-fable-5-1": {
+     "in": 10.0,
+     "out": 50.0
+    }
+   }
+  },
+  "openai": {
+   "pricing_page": "https://developers.openai.com/api/docs/pricing",
+   "models": {
+    "gpt-6-luna": {
+     "in": 0.1,
+     "out": 0.5
+    },
+    "gpt-6.1-terra": {
+     "in": 1.0,
+     "out": 5.0
+    },
+    "gpt-6.1-sol": {
+     "in": 2.0,
+     "out": 10.0
+    },
+    "gpt-6-astra": {
+     "in": 10.0,
+     "out": 50.0
+    }
+   }
+  },
+  "google": {
+   "pricing_page": "https://aistudio.google.com/docs/pricing",
+   "models": {
+    "gemini-3.1-flash-lite": {
+     "in": 0.25,
+     "out": 1.5
+    },
+    "gemini-3.8-flash": {
+     "in": 0.75,
+     "out": 3.75,
+     "changes": [
+      {
+       "from": "2027-01-01",
+       "in": 1.5,
+       "out": 7.5
+      }
+     ]
+    },
+    "gemini-4-argon": {
+     "in": 2.0,
+     "out": 10.0,
+     "changes": [
+      {
+       "from": "2026-12-01",
+       "in": 4.0,
+       "out": 20.0
+      }
+     ]
+    }
+   }
+  }
+ },
+ "tiers": {
+  "small": {
+   "anthropic": "claude-haiku-5-5",
+   "openai": "gpt-6-luna",
+   "google": "gemini-3.1-flash-lite"
+  },
+  "mid": {
+   "anthropic": "claude-sonnet-5-5",
+   "openai": "gpt-6.1-terra",
+   "google": "gemini-3.8-flash"
+  },
+  "large": {
+   "anthropic": "claude-opus-5-5",
+   "openai": "gpt-6.1-sol",
+   "google": "gemini-4-argon"
+  }
+ },
+ "acts": {
+  "punctuate": "small",
+  "tidy": "small",
+  "highlight_title_caption_tags": "small",
+  "video_tags": "small",
+  "all_highlights_title_caption_tags": "mid",
+  "type_check": "mid",
+  "translate": "mid",
+  "index": "mid",
+  "ask": "mid",
+  "report": "large",
+  "highlight_video": "large",
+  "learn_from_corrections": "large"
+ },
+ "smaller_model_cons": "A smaller model is faster and cheaper, but can miss nuance, follow your label meanings less exactly, or need a second try. Its answer still arrives as a proposal for you to accept."
+}
