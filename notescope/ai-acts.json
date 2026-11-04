@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "issued": "2026-11-03",
+ "app": "NoteScope",
+ "uses": "../ai/prices.json",
+ "acts": {
+  "punctuate": "small",
+  "tidy": "small",
+  "highlight_title_caption_tags": "small",
+  "video_tags": "small",
+  "all_highlights_title_caption_tags": "mid",
+  "type_check": "mid",
+  "translate": "mid",
+  "index": "mid",
+  "ask": "mid",
+  "report": "large",
+  "highlight_video": "large",
+  "learn_from_corrections": "large"
+ },
+ "smaller_model_cons": "A smaller model is faster and cheaper, but can miss nuance, follow your label meanings less exactly, or need a second try. Its answer still arrives as a proposal for you to accept."
+}
